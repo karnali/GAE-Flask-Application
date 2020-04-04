@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> -->
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			<b>ML App: Spam Detection For Youtube Comments</b>
+		</div>
+		
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:15;"><b>[- Results for Comment -]</b></p>
+	<div class="results">
+	
+	{% if prediction == 1%}
+	<h3 style="color:red;">That was definitely Spam</h3>
+	{% elif prediction == 0%}
+	<h3 style="color:green;">That was not a Spam (It is a Ham)</h3>
+	{% endif %}
+
+	</div>
+    <a href="https://flask-gae-ml-autoscale.appspot.com/">Try another one.</a>
+
+</body>
+</html>
