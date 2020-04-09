@@ -1,12 +1,7 @@
 from flask import Flask, render_template, request, url_for
-
-# EDA Packages
+import random
+import pickle
 import pandas as pd
-import numpy as np
-
-# ML Packages
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
 
 app = Flask(__name__)
 
@@ -18,35 +13,37 @@ def index():
 
 @app.route("/", methods=['POST'])
 def predict():
-    # Link to dataset from github
-    url = "https://raw.githubusercontent.com/Jcharis/Machine-Learning-Web-Apps/master/Youtube-Spam-Detector-ML-Flask-App/YoutubeSpamMergedData.csv"
-    df = pd.read_csv(url)
-    df_data = df[["CONTENT", "CLASS"]]
-    # Features and Labels
-    df_x = df_data['CONTENT']
-    df_y = df_data.CLASS
-# Extract Feature With CountVectorizer
-    corpus = df_x
-    cv = CountVectorizer()
-    X = cv.fit_transform(corpus)  # Fit the Data
-    from sklearn.model_selection import train_test_split
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, df_y, test_size=0.33, random_state=42)
-    # Naive Bayes Classifier
-    from sklearn.naive_bayes import MultinomialNB
-    clf = MultinomialNB()
-    clf.fit(X_train, y_train)
-    clf.score(X_test, y_test)
-    # Alternative Usage of Saved Model
-    # ytb_model = open("naivebayes_spam_model.pkl","rb")
-    # clf = joblib.load(ytb_model)
+    # unpickle model for use
+    model = pickle.load(open('outputfiles/rf_model.pk1','rb'))
+
+    # the random forest model use a list of features to predict whether cereal is healthy or not. 
+    # We don't want to ask users to input values for all these values. so we will randomly generate values for some of the features.
+    # the front end will ask users to input values for calories, fiber and sugar in grams for their cereal.
+
+    protein = random.uniform(1,5)
+    fat =  random.uniform(1,5)
+    sodium = random.uniform(0,5)
+    carbohydrates= random.uniform(1,30)
+    potassium = random.uniform(0,5)
+    vitamins = random.uniform(1,50)
+
+    #dictionary for df1
+    dict_1 ={'protein':protein,'fat':fat,'sodium':sodium,'carbohydrates':carbohydrates,'potassium':potassium,'vitamins':vitamins}
+
+    #add values to dataframe
+    df1= pd.DataFrame(dict_1, index=[0])
+
 
     if request.method == 'POST':
-        comment = request.form['comment']
-        data = [comment]
-        vect = cv.transform(data).toarray()
-        my_prediction = clf.predict(vect)
-    return render_template('results.html', prediction=my_prediction, comment=comment)
+        calories = request.form['calories']
+        fiber = request.form['fiber']
+        sugars = request.form['sugars']
+
+        dict_2 = {'calories':calories, 'fiber':fiber,'sugars':sugars }
+        df2= pd.DataFrame(dict_2,index=[0])
+        data = pd.concat([df2,df1], axis=1)
+        my_prediction = model.predict(data)
+    return render_template('results.html', prediction=my_prediction, comment='')
 
 
 if __name__ == '__main__':

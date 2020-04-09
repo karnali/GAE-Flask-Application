@@ -10,7 +10,7 @@
 	<header>
 		<div class="container">
 		<div id="brandname">
-			<b>ML App: Spam Detection For Youtube Comments</b>
+			<b>ML App:Healthy Cereal Predictor</b>
 		</div>
 		
 		
@@ -20,11 +20,17 @@
 	<div class="ml-container">
 
 		<form action="{{ url_for('predict')}}" method="POST">
-		<p>Enter Your Comment Here</p>
+		<p>Enter Amount of calories(g) here: </p>
 		<!-- <input type="text" name="comment"/> -->
-		<textarea name="comment" rows="4" cols="50"></textarea>
+		<!--<textarea name="comment" rows="4" cols="50"></textarea>-->
+        <input type="text" name="calories" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
 		<br/>
-
+        <p>Enter Amount of fiber(g) here: </p>
+        <input type="text" name="fiber" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+        <br/>
+        <p>Enter Amount of sugars(g) here: </p>
+        <input type="text" name="sugars" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+        <br/>
 		<input type="submit" class="btn-info" value="predict">
 		
 	</form>
