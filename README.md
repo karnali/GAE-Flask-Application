@@ -7,6 +7,9 @@
 * Richmond Otchere
 
 ### Machine Learning Approach 
+
+![7](pictures/6.png)
+
   * We adopted the random forest model on a list of features to predict whether cereal is healthy or not. 
   * We don't want to ask users to input values for all these values. so we will randomly generate values for some of the  features.
   * the front end will ask users to input values for calories, fiber and sugar in grams for their cereal.
