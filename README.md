@@ -1,4 +1,4 @@
-# Google App Engine - Flask ML Auto Scaling Load test with Locoust CLI.
+# GAE - Flask ML Auto Scaling Load test with Locoust CLI.
 
 
 
@@ -64,3 +64,13 @@ $ locust -f locustfile.py --no-web --host https://flask-gae-ml-autoscale-273601.
 #### Instance Autoscaled graph.  
 
 ![1](pictures/1.png)
+
+
+### Cereal healty or not healthy predictions.
+
+![4](pictures/4.png)
+
+![5](pictures/5.png)
+
+
+
