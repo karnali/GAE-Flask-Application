@@ -7,9 +7,9 @@
 * Richmond Otchere
 
 ### Machine Learning Approach 
-  # We adopted the random forest model on a list of features to predict whether cereal is healthy or not. 
-  # We don't want to ask users to input values for all these values. so we will randomly generate values for some of the  features.
-  # the front end will ask users to input values for calories, fiber and sugar in grams for their cereal.
+  * We adopted the random forest model on a list of features to predict whether cereal is healthy or not. 
+  * We don't want to ask users to input values for all these values. so we will randomly generate values for some of the  features.
+  * the front end will ask users to input values for calories, fiber and sugar in grams for their cereal.
 
 #### Live Google app engine url:
 https://flask-gae-ml-autoscale-273601.uc.r.appspot.com/
