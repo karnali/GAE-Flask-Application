@@ -11,8 +11,9 @@
 ![7](pictures/6.png)
 
   * We adopted the random forest model on a list of features to predict whether cereal is healthy or not. 
-  * We don't want to ask users to input values for all these values. so we will randomly generate values for some of the  features.
-  * the front end will ask users to input values for calories, fiber and sugar in grams for their cereal.
+  * We didn't ask users to input values for all these values. We randomly generated values for some of the  features.
+  * The front end asks users to input values for calories, fiber and sugar in grams for their cereal.
+  * The prediction of a healthy cereal is base on the model working on the background to give a predicted value of whether the cereal is a healthy choice or not.
 
 #### Live Google app engine url:
 https://flask-gae-ml-autoscale-273601.uc.r.appspot.com/
