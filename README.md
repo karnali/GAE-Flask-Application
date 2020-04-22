@@ -2,8 +2,6 @@
 
 
 
-![3](pictures/3.png)
-
 #### Deploy Appengine App
 ```
 $ gcloud app deploy
@@ -15,7 +13,12 @@ SERVICE  VERSION.ID       TRAFFIC_SPLIT  LAST_DEPLOYED              SERVING_STAT
 default  20200403t133612  0.00           2020-04-03T13:43:20-04:00  STOPPED
 default  20200403t142656  1.00           2020-04-03T14:29:37-04:00  SERVING
 ```
+#### Browse app
+```
+$ gcloud app browse
+```
 
+![3](pictures/3.png)
 
 #### You can stream logs from the command line by running:
 ```
@@ -37,7 +40,7 @@ $ locust
 ```
 
 ```
-$ locust -f locustfile.py --no-web --host https://flask-gae-ml-autoscale.appspot.com -c 10 -r 1
+$ locust -f locustfile.py --no-web --host https://flask-gae-ml-autoscale-273601.uc.r.appspot.com -c 10 -r 1
 ```
 
 #### app instances list
