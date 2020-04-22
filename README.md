@@ -39,10 +39,6 @@ sudo python3 -m pip install locustio
 $ locust
 ```
 
-```
-$ locust -f locustfile.py --no-web --host https://flask-gae-ml-autoscale-273601.uc.r.appspot.com -c 10 -r 1
-```
-
 #### app instances list
 
 ```
@@ -57,7 +53,12 @@ default  20200404t000535  00c61b117c7a46d0f08f90e179410464eb31977df1a3c34c4e172b
 default  20200404t000535  00c61b117ce32c112aaf8289288201a9845bea7e76c0f6c742a9cb737e124c4fb2904fc1  N/A
 
 ```
+
 #### Run Locoust in cli
+```
+$ locust -f locustfile.py --no-web --host https://flask-gae-ml-autoscale-273601.uc.r.appspot.com -c 10 -r 1
+```
+
 ![2](pictures/2.png)
 
 #### Instance Autoscaled graph.  
