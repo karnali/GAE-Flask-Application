@@ -1,4 +1,4 @@
-# GAE - Flask ML Auto Scaling Load test with Locoust CLI.
+# GAE - Flask ML Auto Scaling - Load Testing with Locoust CLI.
 
 #### Team Members:
 * Niraj Bista
@@ -7,7 +7,7 @@
 * Richmond Otchere
 
 
-#### Live app engine site url:
+#### Live Google app engine url:
 https://flask-gae-ml-autoscale-273601.uc.r.appspot.com/
 
 
