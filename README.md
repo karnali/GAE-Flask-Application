@@ -1,9 +1,9 @@
 # GAE-Flask-Application
 
-sudo python3 -m pip install locustio  
-locust -f locustfile.py --no-web --host https://flask-gae-ml-autoscale.appspot.com -c 10 -r 1   
+
 ```
 $ gcloud app deploy
+```
 You are creating an app for project [flask-gae-ml-autoscale].
 WARNING: Creating an App Engine application for a project is irreversible and the region
 cannot be changed. More information about regions is at
@@ -60,16 +60,16 @@ Updating service [default] (this may take several minutes)...done.
 Setting traffic split for service [default]...done.
 Deployed service [default] to [https://flask-gae-ml-autoscale.appspot.com]
 
+
+```
 You can stream logs from the command line by running:
   $ gcloud app logs tail -s default
 
+```
 
-
------
+```
 sudo python3 -m pip install locustio
 locust
-
-
 
 
 $ locust -f locustfile.py --no-web --host https://flask-gae-ml-autoscale.appspot.com -c 10 -r 1
