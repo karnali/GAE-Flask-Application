@@ -32,6 +32,8 @@ SERVICE  VERSION.ID       TRAFFIC_SPLIT  LAST_DEPLOYED              SERVING_STAT
 default  20200403t133612  0.00           2020-04-03T13:43:20-04:00  STOPPED
 default  20200403t142656  1.00           2020-04-03T14:29:37-04:00  SERVING
 ```
+![8](pictures/8.png)
+
 #### Browse app
 ```
 $ gcloud app browse
