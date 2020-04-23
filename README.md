@@ -23,6 +23,8 @@ https://flask-gae-ml-autoscale-273601.uc.r.appspot.com/
 ```
 $ gcloud app deploy
 ```
+![7](pictures/7.png)
+
 #### List all app version  
 ```
 $ gcloud app versions list
