@@ -55,6 +55,8 @@ $ gcloud app browse
 ```
 sudo python3 -m pip install locustio
 ```
+![9](pictures/9.png)
+
 #### Run Locoust load test
 ```
 $ locust
