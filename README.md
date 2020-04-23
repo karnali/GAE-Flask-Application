@@ -82,7 +82,7 @@ default  20200404t000535  00c61b117ce32c112aaf8289288201a9845bea7e76c0f6c742a9cb
 $ locust -f locustfile.py --no-web --host https://flask-gae-ml-autoscale-273601.uc.r.appspot.com -c 10 -r 1
 ```
 
-![2](pictures/2.png)
+![10](pictures/10.png)
 
 #### Instance Autoscaled graph.  
 
