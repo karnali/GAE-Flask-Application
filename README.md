@@ -1,29 +1,32 @@
 # GAE - Flask ML Auto Scaling - Load Testing with Locoust CLI.
 
 #### Live Google app engine url:
+```
 https://flask-gae-ml-autoscale-273601.uc.r.appspot.com/
-
+```
 
 #### Demo link [YouTube]  
+```
 https://youtu.be/fkMp7T5c2Js
-
-
+```
 
 #### Team Members:
+```
 * Niraj Bista
 * Stephen Hackman
 * Saif Murad
 * Richmond Otchere
+```
 
 ### Machine Learning Approach 
 
 ![7](pictures/6.png)
-
+```
   * We adopted the random forest model on a list of features to predict whether cereal is healthy or not. 
   * We didn't ask users to input values for all these values. We randomly generated values for some of the  features.
   * The front end asks users to input values for calories, fiber and sugar in grams for their cereal.
   * The prediction of a healthy cereal is base on the model working on the background to give a predicted value of whether the cereal is a healthy choice or not.
-
+```
 
 #### Deploy Appengine App
 ```
