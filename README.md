@@ -1,4 +1,4 @@
-# GAE - Flask ML Auto Scaling - Load Testing with Locoust CLI.
+# GAE - Flask ML Auto Scaling - Load Testing with Locust CLI.
 
 #### Live Google app engine url:
 https://flask-gae-ml-autoscale-273601.uc.r.appspot.com/
@@ -55,14 +55,14 @@ $ gcloud app browse
 
 ### Locoust Load testing instructions.
 
-#### Install Locoust load testthrough cli
+#### Install Locust load testthrough cli
 
 ```
 sudo python3 -m pip install locustio
 ```
 ![9](pictures/9.png)
 
-#### Run Locoust load test
+#### Run Locust load test
 ```
 $ locust
 ```
