@@ -2,12 +2,12 @@
 
 #### Live Google app engine url:
 ```
-https://flask-gae-ml-autoscale-273601.uc.r.appspot.com/
+[https://flask-gae-ml-autoscale-273601.uc.r.appspot.com/](https://flask-gae-ml-autoscale-273601.uc.r.appspot.com/)
 ```
 
 #### Demo link [YouTube]  
 ```
-https://youtu.be/fkMp7T5c2Js
+[https://youtu.be/fkMp7T5c2Js](https://youtu.be/fkMp7T5c2Js)
 ```
 
 #### Team Members:
